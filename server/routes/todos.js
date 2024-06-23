@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
     io.to(todoListId).emit('todoCreated', todo);
     res.status(201).json(todo);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ error: 'Failed to create TODO' });
   }
 });

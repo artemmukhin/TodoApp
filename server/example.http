@@ -16,11 +16,15 @@ Content-Type: application/json
     "password": "alice12345"
 }
 
+
+#  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY",
+#  "userId": "66781225f55e3aad6825c149"
+
 ###
 
 POST http://127.0.0.1:5055/api/auth/create-todo-list
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDU3NDJ9.dyvsGPDFdmRy3fGclSfZv34PX9pRU_Ml5Gncuu4sraA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
 
 {
     "name": "Alice_Groceries1"
@@ -29,9 +33,42 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4M
 
 ###
 
+GET http://127.0.0.1:5055/api/todos/66781515d52547ec06052593
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+
+
+###
+
 POST http://127.0.0.1:5055/api/todos
 Content-Type: application/json
-Authorization: Bearer $TOKEN$
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+
+{
+  "title": "Buy groceries",
+  "state": "TODO",
+  "createdBy": "66781225f55e3aad6825c149",
+  "todoListId": "66781515d52547ec06052593"
+}
+
+
+###
+
+
+PUT http://127.0.0.1:5055/api/todos/66781515d52547ec06052593
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Content-Type: application/json
+
+{
+  "state": "ONGOING"
+}
+
+
+###
+
+POST http://127.0.0.1:5055/api/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
 
 {
     "title": "Create todo list",
