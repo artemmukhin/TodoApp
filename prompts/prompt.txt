@@ -1,0 +1,12 @@
+You need to create a native application that represents a collaborative TODO list. Each TODO has:
+● 3 states: TODO, ONGOING, DONE;
+● A user associated with it, the one that created the todo;
+● The time when the TODO was last updated
+
+Users can change TODOs state back and forward. Transitions need to be sequential TODO > ONGOING > DONE > ONGOING > TODO. There’s no chance to move directly from TODO to DONE.
+
+Whenever a user opens the desktop application we will get the data from the server and will keep it in sync. Users are created the first time they open the application and can either join a TODO list, by using a shared textual key, or they can create a new TODO list, which will generate a random login key.
+
+Both the server and desktop application need to be built based on a script and must run locally. The server should represent a restful API that can easily be set up. The client-side needs to run inside an electron shell, so that it can work both on Mac and Windows. The candidate should also build some tests and ensure they can run locally.
+
+First, come up with a detailed implementation plan. Then, you will be asked to write code for particular files

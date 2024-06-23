@@ -1,0 +1,62 @@
+POST http://127.0.0.1:5055/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "alice",
+    "password": "alice12345"
+}
+
+###
+
+POST http://127.0.0.1:5055/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "alice",
+    "password": "alice12345"
+}
+
+###
+
+POST http://127.0.0.1:5055/api/auth/create-todo-list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDU3NDJ9.dyvsGPDFdmRy3fGclSfZv34PX9pRU_Ml5Gncuu4sraA
+
+{
+    "name": "Alice_Groceries1"
+}
+
+
+###
+
+POST http://127.0.0.1:5055/api/todos
+Content-Type: application/json
+Authorization: Bearer $TOKEN$
+
+{
+    "title": "Create todo list",
+    "description": "Implement the functionality to create a todo list"
+}
+
+###
+
+GET http://127.0.0.1:5055/api/todos
+Authorization: Bearer $TOKEN$
+
+###
+
+GET http://127.0.0.1:5055/api/todos/1
+Authorization: Bearer $TOKEN$
+
+###
+
+PUT http://127.0.0.1:5055/api/todos/1
+Content-Type: application/json
+Authorization: Bearer $TOKEN$
+{
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread",
+    "completed": true
+}
+
+###
