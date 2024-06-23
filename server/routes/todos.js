@@ -5,19 +5,22 @@ const authMiddleware = require('../middleware/authMiddleware');
 const { io } = require('../server');
 const router = express.Router();
 
-router.use(authMiddleware);
+// router.use(authMiddleware);
 
-router.post('/', async (req, res) => {
+router.post('/', authMiddleware, async (req, res) => {
   try {
+    console.log("FOOOOO!!!!");
+    console.log(req.user.userId);
     const { title, todoListId } = req.body;
     const todo = new Todo({
       title,
-      createdBy: req.user.id,
+      createdBy: req.user.userId,
       todoList: todoListId
     });
     await todo.save();
     
-    io.to(todoListId).emit('todoCreated', todo);
+    // io.to(todoListId).emit('todoCreated', todo);
+    console.log("TODO created: " + todo.title)
     res.status(201).json(todo);
   } catch (error) {
     console.log(error);

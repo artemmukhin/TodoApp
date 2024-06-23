@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
 router.post('/create-todo-list', authMiddleware, async (req, res) => {
   try {
     const { name } = req.body;
-    const userId = req.user.id;
+    const userId = req.user.userId;
     
     const shareKey = Math.random().toString(36).substring(2, 10);
     const todoList = new TodoList({ name, shareKey, users: [userId] });
@@ -55,7 +55,7 @@ router.post('/create-todo-list', authMiddleware, async (req, res) => {
 router.post('/join-todo-list', async (req, res) => {
   try {
     const { shareKey } = req.body;
-    const userId = req.user.id;
+    const userId = req.user.userId;
     
     const todoList = await TodoList.findOne({ shareKey });
     if (!todoList) {

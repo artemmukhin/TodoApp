@@ -17,14 +17,11 @@ Content-Type: application/json
 }
 
 
-#  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY",
-#  "userId": "66781225f55e3aad6825c149"
-
 ###
 
 POST http://127.0.0.1:5055/api/auth/create-todo-list
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDgxMTN9.yCRp32jRAeHOS1JB4S3VHeL8H6QCF9TzqZ8luw4bQmw
 
 {
     "name": "Alice_Groceries1"
@@ -35,19 +32,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4M
 
 GET http://127.0.0.1:5055/api/todos/66781515d52547ec06052593
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDgxMTN9.yCRp32jRAeHOS1JB4S3VHeL8H6QCF9TzqZ8luw4bQmw
 
 
 ###
 
 POST http://127.0.0.1:5055/api/todos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDgxMTN9.yCRp32jRAeHOS1JB4S3VHeL8H6QCF9TzqZ8luw4bQmw
 
 {
-  "title": "Buy groceries",
-  "state": "TODO",
-  "createdBy": "66781225f55e3aad6825c149",
+  "title": "Buy groceries 11",
   "todoListId": "66781515d52547ec06052593"
 }
 
@@ -56,7 +51,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4M
 
 
 PUT http://127.0.0.1:5055/api/todos/66781515d52547ec06052593
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDgxMTN9.yCRp32jRAeHOS1JB4S3VHeL8H6QCF9TzqZ8luw4bQmw
 Content-Type: application/json
 
 {
@@ -68,7 +63,7 @@ Content-Type: application/json
 
 POST http://127.0.0.1:5055/api/todos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDcxNjN9.OPjc_enz19RGVFd4Yv5ChA6jeEOAtZsJjHqC4MlbfbY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc4MTIyNWY1NWUzYWFkNjgyNWMxNDkiLCJpYXQiOjE3MTkxNDgxMTN9.yCRp32jRAeHOS1JB4S3VHeL8H6QCF9TzqZ8luw4bQmw
 
 {
     "title": "Create todo list",
