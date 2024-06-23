@@ -1,4 +1,3 @@
-// server/routes/todos.js
 const express = require('express');
 const Todo = require('../models/todo');
 const authMiddleware = require('../middleware/authMiddleware');
@@ -9,8 +8,6 @@ const router = express.Router();
 
 router.post('/', authMiddleware, async (req, res) => {
   try {
-    console.log("FOOOOO!!!!");
-    console.log(req.user.userId);
     const { title, todoListId } = req.body;
     const todo = new Todo({
       title,
