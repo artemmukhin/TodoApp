@@ -1,39 +1,31 @@
 {
-  "name": "todo-client-svelte",
+  "name": "collaborative-todo-app",
   "version": "1.0.0",
-  "private": true,
+  "main": "electron.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "electron": "wait-on http://localhost:5055 && electron .",
     "electron-dev": "concurrently \"npm run dev\" \"npm run electron\"",
-    "electron-pack": "npm run build && electron-builder build --mac --win --linux",
-    "postinstall": "electron-builder install-app-deps"
+    "package": "electron-builder build --mac --win --linux"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "concurrently": "^6.3.0",
-    "electron": "^31.0.2",
-    "electron-builder": "^24.13.3",
+    "concurrently": "^6.2.0",
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0",
-    "wait-on": "^7.2.0"
+    "wait-on": "^6.0.0"
   },
   "dependencies": {
-    "axios": "^1.7.2",
-    "electron-is-dev": "^2.0.0",
     "sirv-cli": "^1.0.0",
-    "socket.io-client": "^4.3.2"
-  },
-  "main": "public/electron.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "svelte-routing": "^1.6.0"
+  }
 }
