@@ -31,5 +31,9 @@
     "sirv-cli": "^1.0.0",
     "socket.io-client": "^4.3.2"
   },
-  "main": "public/electron.js"
+  "main": "public/electron.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
