@@ -4,9 +4,9 @@ const authMiddleware = require('../middleware/authMiddleware');
 const { io } = require('../server');
 const router = express.Router();
 
-// router.use(authMiddleware);
+router.use(authMiddleware);
 
-router.post('/', authMiddleware, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { title, todoListId } = req.body;
     const todo = new Todo({
