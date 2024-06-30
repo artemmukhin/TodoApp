@@ -7,6 +7,10 @@ beforeAll(async () => {
     mongod = await MongoMemoryServer.create();
     const uri = mongod.getUri();
     await mongoose.connect(uri);
+    // Ensure necessary environment variables are set for tests
+    if (!process.env.JWT_SECRET) {
+        process.env.JWT_SECRET = 'test-secret';
+    }
 });
 
 afterAll(async () => {

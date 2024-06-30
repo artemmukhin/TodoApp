@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "jest"
+        "test": "jest",
+        "test:ci": "jest --ci"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
@@ -24,6 +25,7 @@
     "jest": {
         "setupFilesAfterEnv": [
             "./jest.setup.js"
-        ]
+        ],
+        "testEnvironment": "node"
     }
 }
