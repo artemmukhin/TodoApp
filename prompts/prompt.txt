@@ -1,7 +1,7 @@
 You need to create a native application that represents a collaborative TODO list. Each TODO has:
-● 3 states: TODO, ONGOING, DONE;
-● A user associated with it, the one that created the todo;
-● The time when the TODO was last updated
+- 3 states: TODO, ONGOING, DONE;
+- A user associated with it, the one that created the todo;
+- The time when the TODO was last updated
 
 Users can change TODOs state back and forward. Transitions need to be sequential TODO > ONGOING > DONE > ONGOING > TODO. There’s no chance to move directly from TODO to DONE.
 
