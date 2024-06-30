@@ -19,7 +19,9 @@
       <Route path="/" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/todo-lists" component={TodoLists} />
-      <Route path="/todo-list/:id" component={TodoList} />
+      <Route path="/todo-list/:id" let:params>
+        <TodoList id={params.id} />
+      </Route>
     </main>
   </Router>
   
