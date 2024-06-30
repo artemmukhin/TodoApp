@@ -30,3 +30,7 @@ JWT_SECRET=your_jwt_secret
 ```
 
 Replace `your_jwt_secret` with a secure, random string. This file should not be committed to version control to keep sensitive information like secrets and database URIs secure.
+
+## Troubleshooting Jest Tests
+
+When running Jest tests, you might encounter a warning indicating that Jest did not exit one second after the test run has completed. This usually means that there are asynchronous operations that weren't stopped in your tests. To troubleshoot this issue, consider running Jest with the `--detectOpenHandles` flag. This flag helps identify potential issues with asynchronous operations not being properly closed. Additionally, ensure that any setup or teardown processes in your tests, such as connections to databases or external services, are properly closed after the tests complete.
