@@ -3,6 +3,14 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 
 let mongod;
 
+// Function to disconnect MongoDB
+async function disconnectMongoDB() {
+    await mongoose.disconnect();
+    if (mongod) {
+        await mongod.stop();
+    }
+}
+
 beforeAll(async () => {
     mongod = await MongoMemoryServer.create();
     const uri = mongod.getUri();
@@ -14,8 +22,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-    await mongoose.disconnect();
-    await mongod.stop();
+    await disconnectMongoDB();
 });
 
 afterEach(async () => {
